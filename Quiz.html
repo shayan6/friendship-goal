@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Shayan's Friend </title>
+	<link type="text/css" rel="stylesheet" href="style.css" >
+</head>
+<body>
+	<div class="grid" >
+		<nav id="navBar" style="position: absolute; display: block;" > How well do you know shayan? </nav>
+		<div id="quiz" style="display: none;" >
+			<h2>Read CareFully</h2>
+			<hr style="margin-top: 50px;" >
+			<p id="question"></p>
+			<div class="buttons">
+				<label id="button1"><input type="radio" name="option" value="1" ><span id="opt1" ></span></label>
+				<label id="button2"><input type="radio" name="option" value="2" ><span id="opt2" ></span></label>
+				<label id="button3"><input type="radio" name="option" value="3" ><span id="opt3" ></span></label>
+				<label id="button4"><input type="radio" name="option" value="4" ><span id="opt4" ></span></label>
+			</div>
+					<hr style="margin-top: 20px;">
+				<footer>      
+					<button id="nextButton" onclick="loadNextQuestion();" >Next Question</button>
+					<p id="progress" > Question x 0f y</p>
+				</footer>
+		</div>
+		<div id="start" style="display: block; font-size: 50px;" > 
+			<center>
+				<input type="text" name="friend" id="friendName" placeholder="Enter Your Name">
+				<br><br>
+					<button id="reset" onclick="dispo();" >
+						Let's Start
+					</button>
+			</center>
+		
+
+		</div>
+		<div id="result" style="display: none;" ></div>
+		<img id="result2"  src="11.jpg" style=" display: none; height: 150px;  width: 150px; border-radius: 50%; margin: -7% 40%;" >
+		<div id="result3" style="display: none;   margin: 81px 0px 0 125px;
+  font-size: xx-large;" >You can be proud of yourself!</div>
+	</div>
+	<script type="text/javascript">
+		function dispo() {
+			document.getElementById('navBar').style.display = "none";
+			document.getElementById('start').style.display = "none";
+			document.getElementById('quiz').style.display = "block";
+		}
+	</script>
+	<script type="text/javascript" src="questions.js" ></script>
+	<script type="text/javascript" src="script.js" ></script>
+</body>
+</html>
